@@ -1,6 +1,6 @@
 # 03-CSS Variables
 
-####`A responsive web page where you can set image's background color, blur it or space it.`
+**A responsive web page where you can set image's background color, blur it or space it.**
 ![CSS Variables](./assets/css-variables.jpg)
 
 ## Noteworthy points:

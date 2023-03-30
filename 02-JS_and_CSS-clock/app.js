@@ -6,16 +6,16 @@ const hand = document.querySelector(".hand");
 setInterval(setDate, 1000);
 
 function setDate() {
-  const now = new Date();
-  rotateSeconds(now);
-  rotateMinutes(now);
-  rotateHours(now);
+  const currentTime = new Date();
+  rotateSeconds(currentTime);
+  rotateMinutes(currentTime);
+  rotateHours(currentTime);
 }
 
 function rotateHours(date) {
   const hours = date.getHours();
-  const hoursDegrees = (hours / 12) * 360 + 90;
-  //   hoursHand.style.background='red'
+  // Makes hour hand move closer to another hour according to minutes span:
+  const hoursDegrees = (hours / 12) * 360 + (date.getMinutes() / 60) * 30 + 90;
   hoursHand.style.transform = setRotate(hoursDegrees, hoursHand);
 }
 

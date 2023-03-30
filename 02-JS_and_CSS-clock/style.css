@@ -1,7 +1,7 @@
 html {
   background: #018ded url(https://unsplash.it/1500/1000?image=881&blur=5);
   background-size: cover;
-  font-family: "helvetica neue";
+  font-family: "Delicious Handrawn", cursive;
   text-align: center;
   font-size: 10px;
 }
@@ -54,12 +54,14 @@ body {
 }
 
 .min-hand {
+  background: "#e4b7e5";
   width: 45%;
   left: 5%;
   z-index: 2;
 }
 
 .second-hand {
+  background: red;
   height: 3px;
   z-index: 1;
 }
@@ -74,4 +76,30 @@ body {
   left: 48%;
   background: black;
   z-index: 5;
+}
+
+div {
+  font-size: 45px;
+}
+
+.hours {
+  position: absolute;
+}
+
+.top {
+  left: 46%;
+}
+.right {
+  left: 90%;
+  top: 40%;
+}
+
+.bottom {
+  top: 84%;
+  left: 47%;
+}
+
+.left {
+  top: 40%;
+  left: 2%;
 }

@@ -14,7 +14,7 @@ function setDate() {
 
 function rotateHours(date) {
   const hours = date.getHours();
-  const hoursDegrees = (1 / 12) * 360 + 90;
+  const hoursDegrees = (hours / 12) * 360 + 90;
   //   hoursHand.style.background='red'
   hoursHand.style.transform = setRotate(hoursDegrees, hoursHand);
 }
@@ -22,14 +22,12 @@ function rotateHours(date) {
 function rotateMinutes(date) {
   const minutes = date.getMinutes();
   const minutesDegrees = (minutes / 60) * 360 + 90;
-  minutesHand.style.background = "#e4b7e5";
   minutesHand.style.transform = setRotate(minutesDegrees, minutesHand);
 }
 
 function rotateSeconds(date) {
   const seconds = date.getSeconds();
   const secondsDegrees = (seconds / 60) * 360 + 90;
-  secondHand.style.background = "red";
   secondHand.style.transform = setRotate(secondsDegrees, secondHand);
 }
 

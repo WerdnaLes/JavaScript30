@@ -70,13 +70,15 @@ function filterBornIn1500(people) {
   );
 }
 
-// console.log(`Filter inventors born in 1500's:`);
-// console.table(filterBornIn1500(inventors));
+console.log(`Filter inventors born in 1500's:`);
+console.table(filterBornIn1500(inventors));
+
 // Array.prototype.map()
 // 2. Give us an array of the inventors first and last names
 function firstLastNames(people) {
   return people.map((inventor) => `${inventor.first} ${inventor.last}`);
 }
+
 // console.log(`Filter first and last names:`);
 // console.table(firstLastNames(inventors));
 
@@ -86,23 +88,16 @@ function sortByAge(people) {
   return people.sort((a, b) => (a.year > b.year ? 1 : -1));
 }
 
-/* sortByAge sorting is very similar to Bubble sorting:
-function anotherSort(people) {
-  for (let i = 0; i < people.length; i++) {
-    for (let y = i + 1; y < people.length; y++) {
-      if (people[i].year > people[y].year) {
-        let temp = people[i];
-        people[i] = people[y];
-        people[y] = temp;
-      }
-    }
-  }
-  return people;
-}
-*/
-console.table(sortByAge(inventors));
+// console.table(sortByAge(inventors));
+
 // Array.prototype.reduce()
 // 4. How many years did all the inventors live all together?
+function sumYearsOfLiving(people) {
+  return people.reduce((total, inventor) => {
+    return total + (inventor.passed - inventor.year);
+  }, 0);
+}
+// console.table(sumYearsOfLiving(inventors));
 
 // 5. Sort the inventors by years lived
 

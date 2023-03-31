@@ -28,6 +28,15 @@ const challenges = [
     repo: "https://github.com/WerdnaLes/JavaScript30-courses/tree/main/03-CSS-Variables",
     note: "https://github.com/WerdnaLes/JavaScript30-courses/blob/main/03-CSS-Variables/README.md",
   },
+  {
+    id: 4,
+    title: "Array Cardio Day 1",
+    desc: "A bit of practice with Arrays in JavaScript",
+    image: "./04-Array-Cardio-Day-1/assets/array.jpg",
+    demo: "./04-Array-Cardio-Day-1",
+    repo: "https://github.com/WerdnaLes/JavaScript30-courses/tree/main/04-Array-Cardio-Day-1",
+    note: "https://github.com/WerdnaLes/JavaScript30-courses/blob/main/04-Array-Cardio-Day-1/README.md",
+  },
 ];
 
 function generateChallenges() {

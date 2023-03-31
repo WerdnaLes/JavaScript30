@@ -1,7 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Alkatra&display=swap");
+
 *,
 ::before,
 ::after {
   box-sizing: border-box;
+}
+
+html {
+  font-family: "Alkatra", cursive, sans-serif;
+  font-size: 16px;
+}
+body {
+  background: linear-gradient(
+    to bottom,
+    #ff9aa2,
+    #ffb7b2,
+    #ffd7c0,
+    #fff8d1,
+    #e1f7d5,
+    #b2e6e2,
+    #81c3d7,
+    #5ea8d6,
+    #5eadfc,
+    #84e1ff,
+    #a7f3ff,
+    #caffff
+  );
+  background-size: 100% 100%;
 }
 
 img,
@@ -17,8 +42,13 @@ svg {
 .header {
   display: flex;
   justify-content: center;
+  font-size: 1.3em;
 }
 
+.content-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
 .content {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -30,6 +60,9 @@ svg {
   margin-top: 5rem;
   background-color: white;
   border: 2px solid black;
+  border-radius: 10px;
+  text-align: center;
+  background: #f8e6e8;
 }
 
 .challenge__img {
@@ -50,4 +83,19 @@ svg {
   color: black;
   text-decoration: none;
   font-size: 1.1em;
+  border-right: 1px solid black;
+}
+
+.challenge__link:hover {
+  color: white;
+  background-color: rgb(55, 48, 48);
+}
+
+.challenge__link:nth-last-of-type(1) {
+  border: none;
+  border-end-end-radius: 7px;
+}
+
+.challenge__link:nth-last-of-type(3) {
+  border-end-start-radius: 7px;
 }

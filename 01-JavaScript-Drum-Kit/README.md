@@ -1,4 +1,4 @@
-# 01-JavaScript Drum Kit
+# 01-JavaScript-Drum-Kit
 A responsive list of keys that will play sound and glow when you click on them.
 ![](./drum-kit.jpg)
 ## Noteworthy points:

@@ -1,4 +1,4 @@
-# 02 - CSS + JS Clock
+# 02-CSS+JS Clock
 A clock that displays your local time
 ![](./js-clock.jpg)
 ## Noteworthy points:

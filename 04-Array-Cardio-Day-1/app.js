@@ -108,6 +108,7 @@ function sortByYearsLived(people) {
   );
 }
 
+console.log(`Sort inventors by years of living:`);
 console.table(sortByYearsLived(inventors));
 
 // 6. create a list of Boulevards in Paris that contain 'de' anywhere in the name
@@ -130,6 +131,7 @@ function sortAlphabetically(people) {
   });
 }
 
+console.log(`Sort people alphabetically by last name:`);
 console.table(sortAlphabetically(people));
 
 // 8. Reduce Exercise
@@ -161,4 +163,5 @@ function sumInstances(data) {
   }, {});
 }
 
+console.log(`Sum instances of each element of the array:`);
 console.table(sumInstances(data));

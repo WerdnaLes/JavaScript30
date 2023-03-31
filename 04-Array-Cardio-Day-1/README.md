@@ -1,7 +1,5 @@
 # 04-Array-Cardio-Day-1
 
----
-
 Practice with some Array functions
 
 ## Noteworthy points:
@@ -52,5 +50,30 @@ function sumYearsOfLiving(people) {
   return people.reduce((total, inventor) => {
     return total + (inventor.passed - inventor.year);
   }, 0); // set initial value (total) of 0
+}
+```
+### Convert a NodeList to an Array:
+```javascript
+const links = Array.from(category.querySelectorAll("a"));
+
+```
+OR use spread (...):
+```javascript
+const links = [...category.querySelectorAll("a")];
+```
+### Map a new array from previous array text content and filter it to include "de" in it:
+```javascript
+const de = links
+  .map((link) => link.textContent)
+  .filter((street) => street.includes("de"));
+```
+### Sort an array alphabetically using deconstruction and split String:
+```javascript
+function sortAlphabetically(people) {
+  return people.sort((lastOne, nextOne) => {
+    const [aLast, aFirst] = lastOne.split(", ");
+    const [bLast, bFirst] = nextOne.split(", ");
+    return aLast > bLast ? 1 : -1;
+  });
 }
 ```

@@ -52,22 +52,29 @@ function sumYearsOfLiving(people) {
   }, 0); // set initial value (total) of 0
 }
 ```
+
 ### Convert a NodeList to an Array:
+
 ```javascript
 const links = Array.from(category.querySelectorAll("a"));
-
 ```
+
 OR use spread (...):
+
 ```javascript
 const links = [...category.querySelectorAll("a")];
 ```
+
 ### Map a new array from previous array text content and filter it to include "de" in it:
+
 ```javascript
 const de = links
   .map((link) => link.textContent)
   .filter((street) => street.includes("de"));
 ```
+
 ### Sort an array alphabetically using deconstruction and split String:
+
 ```javascript
 function sortAlphabetically(people) {
   return people.sort((lastOne, nextOne) => {
@@ -75,5 +82,19 @@ function sortAlphabetically(people) {
     const [bLast, bFirst] = nextOne.split(", ");
     return aLast > bLast ? 1 : -1;
   });
+}
+```
+
+### Sum the times an element repeats in an array and return a new object to reflect it:
+
+```javascript
+function sumInstances(data) {
+  return data.reduce((obj, item) => {
+    if (!obj[item]) {
+      obj[item] = 0; // Add an initial value to an object item if is undefined
+    }
+    obj[item]++;
+    return obj;
+  }, {});
 }
 ```

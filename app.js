@@ -46,6 +46,15 @@ const challenges = [
     repo: "https://github.com/WerdnaLes/JavaScript30-courses/tree/main/05-Flex-Pannel-Gallery",
     note: "https://github.com/WerdnaLes/JavaScript30-courses/blob/main/05-Flex-Pannel-Gallery/README.md",
   },
+  {
+    id: 6,
+    title: "Type Ahead",
+    desc: "A search form that displays and highlights the cities you search.",
+    image: "./06-Type-Ahead/assets/type-ahead-preview.jpg",
+    demo: "./06-Type-Ahead",
+    repo: "https://github.com/WerdnaLes/JavaScript30-courses/tree/main/06-Type-Ahead",
+    note: "https://github.com/WerdnaLes/JavaScript30-courses/blob/main/06-Type-Ahead/README.md",
+  },
 ];
 
 function generateChallenges() {

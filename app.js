@@ -37,6 +37,15 @@ const challenges = [
     repo: "https://github.com/WerdnaLes/JavaScript30-courses/tree/main/04-Array-Cardio-Day-1",
     note: "https://github.com/WerdnaLes/JavaScript30-courses/blob/main/04-Array-Cardio-Day-1/README.md",
   },
+  {
+    id: 5,
+    title: "Flex Pannel Gallery",
+    desc: "A photo gallery page created using nested flexboxes and transitions.",
+    image: "./05-Flex-Pannel-Gallery/assets/box-preview.jpg",
+    demo: "./05-Flex-Pannel-Gallery",
+    repo: "https://github.com/WerdnaLes/JavaScript30-courses/tree/main/05-Flex-Pannel-Gallery",
+    note: "https://github.com/WerdnaLes/JavaScript30-courses/blob/main/05-Flex-Pannel-Gallery/README.md",
+  },
 ];
 
 function generateChallenges() {

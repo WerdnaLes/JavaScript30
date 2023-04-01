@@ -1,17 +1,27 @@
 # 02-CSS+JS Clock
+
 A clock that displays your local time
+
+---
+
+### Preview:
+
 ![](./js-clock.jpg)
+
 ## Noteworthy points:
+
 ### Set hour hand to move closer to next hour according to minutes span:
+
 ```javascript
 function rotateHours(date) {
   const hours = date.getHours();
   const hoursDegrees = (hours / 12) * 360 + (date.getMinutes() / 60) * 30 + 90;
   hoursHand.style.transform = setRotate(hoursDegrees, hoursHand);
 }
-
 ```
+
 ### Remove transition bug when hand rotates to 90deg:
+
 ```javascript
 function setRotate(deg, pointer) {
   if (deg === 90) {
@@ -22,7 +32,9 @@ function setRotate(deg, pointer) {
   return `rotate(${deg}deg)`;
 }
 ```
+
 ### Set function to repeat after some time (in ms):
+
 ```javascript
 setInterval(setDate, 1000);
 ```

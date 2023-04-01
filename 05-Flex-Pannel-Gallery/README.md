@@ -15,3 +15,17 @@ Image...
 ```css
 box-shadow: inset 0 0 0 5px rgba(255, 255, 255, 0.1);
 ```
+
+### Move first and last childs of an element out of the page borders:
+
+```css
+/* Move up: */
+.panel > *:first-child {
+  transform: translateY(-100%);
+}
+
+/* Move down: */
+.panel > *:last-child {
+  transform: translateY(100%);
+}
+```

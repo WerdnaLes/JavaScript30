@@ -36,7 +36,7 @@ function handleUpdate() {
 
 ### Add variables to the :root element:
 
-```javascript
+```css
 :root {
   --base: #ffc600;
   --spacing: 10px;

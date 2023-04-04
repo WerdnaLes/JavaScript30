@@ -60,7 +60,7 @@ const challenges = [
     title: "Array Cardio Day 2",
     desc: "A bit of practice with Arrays in JavaScript",
     image: "./04-Array-Cardio-Day-1/assets/array.jpg",
-    demo: "./06-Type-Ahead",
+    demo: "./07-Type-Ahead",
     repo: "https://github.com/WerdnaLes/JavaScript30-courses/tree/main/06-Type-Ahead",
     note: "https://github.com/WerdnaLes/JavaScript30-courses/blob/main/06-Type-Ahead/README.md",
   },
@@ -219,12 +219,13 @@ const challenges = [
   },
   {
     id: 25,
-    title: "",
-    desc: "",
-    image: "./assets/soon.jpg",
-    demo: "",
-    repo: "",
-    note: "",
+    title: "Event Capture Propagation Bubbling and Once",
+    desc: "A demonstration of usage of propagation, bubbling and once.",
+    image:
+      "./25-Event-Capture_Propagation_Bubbling-and-Once/assets/propagation-preview.jpg",
+    demo: "./25-Event-Capture_Propagation_Bubbling-and-Once",
+    repo: "https://github.com/WerdnaLes/JavaScript30-courses/tree/main/25-Event-Capture_Propagation_Bubbling-and-Once",
+    note: "https://github.com/WerdnaLes/JavaScript30-courses/blob/main/25-Event-Capture_Propagation_Bubbling-and-Once/README.md",
   },
   {
     id: 26,

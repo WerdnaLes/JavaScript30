@@ -60,9 +60,9 @@ const challenges = [
     title: "Array Cardio Day 2",
     desc: "A bit of practice with Arrays in JavaScript",
     image: "./04-Array-Cardio-Day-1/assets/array.jpg",
-    demo: "./07-Type-Ahead",
-    repo: "https://github.com/WerdnaLes/JavaScript30-courses/tree/main/06-Type-Ahead",
-    note: "https://github.com/WerdnaLes/JavaScript30-courses/blob/main/06-Type-Ahead/README.md",
+    demo: "./07-Array-Cardio-Day-2",
+    repo: "https://github.com/WerdnaLes/JavaScript30-courses/tree/main/07-Array-Cardio-Day-2",
+    note: "https://github.com/WerdnaLes/JavaScript30-courses/blob/main/07-Array-Cardio-Day-2/README.md",
   },
   {
     id: 8,

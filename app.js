@@ -75,12 +75,12 @@ const challenges = [
   },
   {
     id: 9,
-    title: "",
-    desc: "",
-    image: "./assets/soon.jpg",
-    demo: "",
-    repo: "",
-    note: "",
+    title: "Dev Tools Domination",
+    desc: "Some useful tricks with console",
+    image: "./assets/default.png",
+    demo: "./09-Dev-Tools-Domination",
+    repo: "https://github.com/WerdnaLes/javascript30-courses/tree/main/09-Dev-Tools-Domination",
+    note: "https://github.com/WerdnaLes/javascript30-courses/blob/main/09-Dev-Tools-Domination/README.md",
   },
   {
     id: 10,

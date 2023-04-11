@@ -45,6 +45,6 @@ My JavaScript30 courses practice
 
 ---
 
-<p style="text-align:center">
+<p align="center">
 All projects are based on courses by Wes Bos: <a href="https://javascript30.com/">JavaScript30</a>
 </p>

@@ -21,7 +21,7 @@ My JavaScript30 courses practice
 | 7   | Array Cardio Day 2                          | [README](https://github.com/WerdnaLes/JavaScript30-courses/tree/main/07-Array-Cardio-Day-2)                                    | [DEMO](https://werdnales.github.io/javascript30-courses/07-Array-Cardio-Day-2/)                         |
 | 8   | Fun with HTML5 Canvas                       | [README](https://github.com/WerdnaLes/javascript30-courses/blob/main/08-Fun-with-HTML5-Canvas/README.md)                       | [DEMO](https://werdnales.github.io/javascript30-courses/08-Fun-with-HTML5-Canvas)                       |
 | 9   | Dev Tools Domination                        | [README](https://github.com/WerdnaLes/javascript30-courses/blob/main/09-Dev-Tools-Domination/README.md)                        | [DEMO](https://werdnales.github.io/javascript30-courses/09-Dev-Tools-Domination)                        |
-| 10  | Soon                                        | README                                                                                                                         | DEMO                                                                                                    |
+| 10  | Hold Shift and Check Checkboxes             | [README](https://github.com/WerdnaLes/javascript30-courses/blob/main/10-Hold-Shift-and-Check-Checkboxes/README.md)             | [DEMO](https://werdnales.github.io/javascript30-courses/10-Hold-Shift-and-Check-Checkboxes)             |
 | 11  | Soon                                        | README                                                                                                                         | DEMO                                                                                                    |
 | 12  | Soon                                        | README                                                                                                                         | DEMO                                                                                                    |
 | 13  | Soon                                        | README                                                                                                                         | DEMO                                                                                                    |
@@ -45,6 +45,6 @@ My JavaScript30 courses practice
 
 ---
 
-<p style="text-align:center;">
+<p style="text-align:center">
 All projects are based on courses by Wes Bos: <a href="https://javascript30.com/">JavaScript30</a>
 </p>

@@ -6,7 +6,9 @@ A clock that displays your local time
 
 ### Preview:
 
-![](./js-clock.jpg)
+<p align="center">
+    <img src="./js-clock.jpg"></img>
+</p>
 
 ## Noteworthy points:
 

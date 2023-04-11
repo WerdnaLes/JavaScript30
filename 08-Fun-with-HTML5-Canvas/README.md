@@ -6,7 +6,9 @@ Paint something on canvas with your mouse
 
 ### Preview:
 
-![](./assets/html-fun-demo.gif)
+<p align="center">
+    <img src="./assets/html-fun-demo.gif"></img>
+</p>
 
 ## Noteworthy points:
 

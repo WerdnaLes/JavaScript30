@@ -6,7 +6,9 @@ A search form that displays and highlights the cities you search.
 
 ### Preview:
 
-![](./assets/type-ahead-demo.gif)
+<p align="center">
+    <img src="./assets/type-ahead-demo.gif"></img>
+</p>
 
 ## Noteworthy points:
 

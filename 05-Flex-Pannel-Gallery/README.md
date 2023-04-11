@@ -6,7 +6,9 @@ A photo gallery page created using nested flexboxes and transitions.
 
 ### Preview:
 
-![](./assets/flex-panels-demo.gif)
+<p align="center">
+    <img src="./assets/flex-panels-demo.gif"></img>
+</p>
 
 ## Noteworthy points:
 

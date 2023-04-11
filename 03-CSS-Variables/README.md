@@ -6,7 +6,9 @@ A responsive web page where you can set image's background color, blur it or spa
 
 ### Preview:
 
-![CSS Variables](./assets/scoped-css-demo.gif)
+<p align="center">
+    <img src="./assets/scoped-css-demo.gif"></img>
+</p>
 
 ## Noteworthy points:
 

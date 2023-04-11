@@ -84,12 +84,12 @@ const challenges = [
   },
   {
     id: 10,
-    title: "",
-    desc: "",
-    image: "./assets/soon.jpg",
-    demo: "",
-    repo: "",
-    note: "",
+    title: "Hold Shift and Check Checkboxes",
+    desc: "Check checkboxes in between via Shift key",
+    image: "./10-Hold-Shift-and-Check-Checkboxes/assets/checkbox-preview.jpg",
+    demo: "./10-Hold-Shift-and-Check-Checkboxes",
+    repo: "https://github.com/WerdnaLes/javascript30-courses/tree/main/10-Hold-Shift-and-Check-Checkboxes",
+    note: "https://github.com/WerdnaLes/javascript30-courses/blob/main/10-Hold-Shift-and-Check-Checkboxes/README.md",
   },
   {
     id: 11,

@@ -6,7 +6,15 @@ const progressBar = player.querySelector(".progress__filled");
 const toggle = player.querySelector(".toggle");
 const skipButtons = player.querySelectorAll("[data-skip]");
 const ranges = player.querySelectorAll(".player__slider");
+const screenChange = document.getElementById("screen-change");
+const playbackRateText = player.querySelector(".speed");
+const muteButton = player.querySelector(".mute");
+const showVolume = player.querySelector(".mute span");
+const volumeRange = player.querySelector("#volume-range");
 let isDown = false;
+let isFullScreen = false;
+let isMuted = false;
+let lastVolumeRate;
 
 // Build the functions:
 function togglePlay() {
@@ -17,29 +25,73 @@ function togglePlay() {
   //   video[method]();
 }
 
+// Toggle play and stop buttons icons:
 function updateButton() {
   const icon = this.paused ? "►" : "❚ ❚";
   toggle.textContent = icon;
 }
 
+// Skip forward or backward:
 function skip() {
   video.currentTime += parseFloat(this.dataset.skip);
 }
 
+// Constantly update progress bar:
 function handleProgress() {
   const percentage = (video.currentTime / video.duration) * 100;
   progressBar.style.flexBasis = `${percentage}%`;
 }
 
+// Adjust volume and playback rate:
 function handleRangeUpdate() {
   video[this.name] = this.value;
+
+  switch (this.name) {
+    case "playbackRate":
+      playbackRateText.textContent = `${this.value}x`;
+      break;
+    case "volume":
+      console.log(this.value);
+      if (this.value === "0") {
+        showVolume.textContent = `volume_off`;
+      } else if (this.value < 0.5) {
+        showVolume.textContent = `volume_down`;
+      } else {
+        showVolume.textContent = `volume_up`;
+      }
+      break;
+  }
 }
 
+// Update progress bar manually:
 function updateProgress(e) {
-    const percentage = parseFloat(
-      (e.offsetX / progress.offsetWidth) * video.duration
-    );
-    video.currentTime = percentage;
+  const percentage = parseFloat(
+    (e.offsetX / progress.offsetWidth) * video.duration
+  );
+  video.currentTime = percentage;
+}
+
+// Display the video in a full screen:
+function changeScreenSize() {
+  if (player.requestFullscreen && !isFullScreen) {
+    player.requestFullscreen();
+  } else document.exitFullscreen();
+
+  isFullScreen = !isFullScreen;
+  console.log(isFullScreen);
+}
+
+function muteVolume() {
+  if (isMuted) {
+    muteButton.firstElementChild.textContent = `volume_up`;
+    volumeRange.value = lastVolumeRate;
+  } else {
+    lastVolumeRate = volumeRange.value;
+    volumeRange.value = 0;
+    muteButton.firstElementChild.textContent = `volume_off`;
+  }
+  video["volume"] = volumeRange.value;
+  isMuted = !isMuted;
 }
 
 // Hook up event listeners:
@@ -55,6 +107,9 @@ ranges.forEach((range) => {
 });
 
 progress.addEventListener("click", updateProgress);
-progress.addEventListener("mousemove", (e)=> isDown && updateProgress(e));
+progress.addEventListener("mousemove", (e) => isDown && updateProgress(e));
 progress.addEventListener("mousedown", () => (isDown = true));
 document.addEventListener("mouseup", () => (isDown = false));
+
+screenChange.addEventListener("click", changeScreenSize);
+muteButton.addEventListener("click", muteVolume);

@@ -8,6 +8,16 @@
     <link rel="icon" href="https://fav.farm/🔥" />
     <link rel="stylesheet" href="./style.css" />
     <script src="./app.js" defer></script>
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
   </head>
   <body>
     <div class="player">
@@ -18,7 +28,11 @@
           <div class="progress__filled"></div>
         </div>
         <button class="player__button toggle" title="Toggle Play">►</button>
+        <button class="mute">
+          <span class="material-symbols-outlined"> volume_up </span>
+        </button>
         <input
+          id="volume-range"
           type="range"
           class="player__slider"
           name="volume"
@@ -27,6 +41,7 @@
           step="0.05"
           value="1"
         />
+        <div class="speed">1x</div>
         <input
           type="range"
           class="player__slider"
@@ -36,8 +51,11 @@
           step="0.1"
           value="1"
         />
-        <button class="player__button" data-skip="-10">10s</button>
-        <button class="player__button" data-skip="25">25s</button>
+        <button class="player__button" data-skip="-10">«10s</button>
+        <button class="player__button" data-skip="25">25s»</button>
+        <button class="player__button" id="screen-change">
+          <span class="material-symbols-outlined"> fit_screen </span>
+        </button>
       </div>
     </div>
   </body>

@@ -32,6 +32,7 @@ body {
 .player:fullscreen {
   max-width: none;
   width: 100%;
+  display: flex;
 }
 
 .player:-webkit-full-screen {
@@ -53,6 +54,20 @@ body {
   padding: 0;
   cursor: pointer;
   max-width: 50px;
+  user-select: none;
+}
+
+.speed,
+.mute {
+  color: white;
+  background: none;
+  border: 0;
+  line-height: 1;
+  font-size: 14px;
+  text-align: center;
+  align-self: center;
+  max-width: 50px;
+  user-select: none;
 }
 
 .player__button:focus {

@@ -93,12 +93,12 @@ const challenges = [
   },
   {
     id: 11,
-    title: "",
-    desc: "",
-    image: "./assets/soon.jpg",
-    demo: "",
-    repo: "",
-    note: "",
+    title: "Custom Video Player",
+    desc: "A custom video player",
+    image: "./11-Custom-Video-Player/assets/video-player-preview.jpg",
+    demo: "./11-Custom-Video-Player",
+    repo: "https://github.com/WerdnaLes/javascript30-courses/tree/main/11-Custom-Video-Player",
+    note: "https://github.com/WerdnaLes/javascript30-courses/blob/main/11-Custom-Video-Player/README.md",
   },
   {
     id: 12,

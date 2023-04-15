@@ -94,8 +94,9 @@ body {
   flex-basis: 100%;
   height: 5px;
   transition: height 0.3s;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(74, 74, 74, 0.5);
   cursor: ew-resize;
+  user-select: none; /*prevent progress dragging bug*/
 }
 
 .progress__filled {
@@ -103,6 +104,7 @@ body {
   background: #ffc600;
   flex: 0;
   flex-basis: 0.1%;
+  user-select: none; /*prevent progress dragging bug*/
 }
 
 input[type="range"] {

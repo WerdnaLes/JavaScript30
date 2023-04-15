@@ -1,4 +1,38 @@
-My variant of updating progress range:
+# 11-Custom-Video-Player
+
+A custom video player
+
+---
+
+### Preview:
+
+<p align="center">
+    <img src="./assets/video-player-preview.jpg"></img>
+</p>
+
+## Noteworthy points:
+
+### Move to function if left boolean is truthy:
+
+```javascript
+progress.addEventListener("mousemove", (e) => isDown && updateProgress(e));
+```
+
+### Enter and exit full screen:
+
+```javascript
+function changeScreenSize() {
+  if (player.requestFullscreen && !isFullScreen) {
+    player.requestFullscreen();
+  } else document.exitFullscreen();
+
+  isFullScreen = !isFullScreen;
+}
+```
+
+---
+
+### My variant of updating progress range:
 
 ```javascript
 progress.addEventListener("click", updateProgress);
@@ -17,7 +51,7 @@ function updateProgress(e) {
 }
 ```
 
-Course variant:
+### Course variant:
 
 ```javascript
 progress.addEventListener("click", updateProgress);

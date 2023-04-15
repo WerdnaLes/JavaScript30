@@ -51,7 +51,6 @@ function handleRangeUpdate() {
       playbackRateText.textContent = `${this.value}x`;
       break;
     case "volume":
-      console.log(this.value);
       if (this.value === "0") {
         showVolume.textContent = `volume_off`;
       } else if (this.value < 0.5) {
@@ -78,17 +77,16 @@ function changeScreenSize() {
   } else document.exitFullscreen();
 
   isFullScreen = !isFullScreen;
-  console.log(isFullScreen);
 }
 
 function muteVolume() {
   if (isMuted) {
-    muteButton.firstElementChild.textContent = `volume_up`;
+    showVolume.textContent = `volume_up`;
     volumeRange.value = lastVolumeRate;
   } else {
     lastVolumeRate = volumeRange.value;
     volumeRange.value = 0;
-    muteButton.firstElementChild.textContent = `volume_off`;
+    showVolume.textContent = `volume_off`;
   }
   video["volume"] = volumeRange.value;
   isMuted = !isMuted;

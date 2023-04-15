@@ -97,6 +97,7 @@ video.addEventListener("click", togglePlay);
 video.addEventListener("play", updateButton);
 video.addEventListener("pause", updateButton);
 video.addEventListener("timeupdate", handleProgress);
+video.addEventListener("dblclick", changeScreenSize);
 toggle.addEventListener("click", togglePlay);
 skipButtons.forEach((button) => button.addEventListener("click", skip));
 ranges.forEach((range) => {

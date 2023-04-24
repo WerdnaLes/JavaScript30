@@ -5,7 +5,7 @@ const challenges = [
     id: 1,
     title: "JS Drum Kit",
     desc: "A responsive list of keys that will play sound and glow when you click on them.",
-    image: "./01-JavaScript-Drum-Kit/drum-kit.jpg",
+    image: "./01-JavaScript-Drum-Kit/assets/test-preview.jpg",
     demo: "./01-JavaScript-Drum-Kit",
     repo: "https://github.com/WerdnaLes/JavaScript30-courses/tree/main/01-JavaScript-Drum-Kit",
     note: "https://github.com/WerdnaLes/JavaScript30-courses/blob/main/01-JavaScript-Drum-Kit/README.md",
@@ -14,7 +14,7 @@ const challenges = [
     id: 2,
     title: "CSS + JS Clock",
     desc: "A clock that displays your local time",
-    image: "./02-JS-and-CSS-clock/js-clock.jpg",
+    image: "./02-JS-and-CSS-clock/clock-preview.jpg",
     demo: "./02-JS-and-CSS-clock",
     repo: "https://github.com/WerdnaLes/JavaScript30-courses/tree/main/02-JS-and-CSS-clock",
     note: "https://github.com/WerdnaLes/JavaScript30-courses/blob/main/02-JS-and-CSS-clock/README.md",
@@ -282,9 +282,10 @@ function generateChallenges() {
                 <div class="challenge__title">#<span class="challenge__id">${
                   challenge.id
                 } </span>${challenge.title.toUpperCase()}</div>
+                <div class="image-container">
                 <img class="challenge__img" src="${challenge.image}" alt="${
       challenge.title
-    }">
+    }"></div>
                 <div class="challenge__links">
                     <a class="challenge__link demo__link" href="${
                       challenge.demo

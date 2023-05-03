@@ -1,3 +1,7 @@
+:root {
+  --onHover-button-color: #b0b0b0;
+}
+
 html {
   box-sizing: border-box;
   background: url("./assets/oh-la-la.jpeg") center no-repeat;
@@ -72,10 +76,35 @@ h2 {
 
 .add-items {
   margin-top: 20px;
+  display: flex;
 }
 
 .add-items input {
   padding: 10px;
   outline: 0;
   border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.add-items input[type="text"] {
+  flex: 2;
+}
+
+/* Challenge: */
+
+.global-buttons {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.global-buttons input {
+  flex: 1;
+  padding: 10px;
+  outline: 0;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.buttons:hover {
+  background: var(--onHover-button-color);
+  cursor: pointer;
 }

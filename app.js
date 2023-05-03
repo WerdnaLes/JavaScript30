@@ -129,12 +129,12 @@ const challenges = [
   },
   {
     id: 15,
-    title: "",
-    desc: "",
-    image: "./assets/soon.jpg",
-    demo: "",
-    repo: "",
-    note: "",
+    title: "Local Storage",
+    desc: "Store some data locally to be displayed even if the page was refreshed",
+    image: "./15-Local-Storage/assets/storage-preview.jpg",
+    demo: "./15-Local-Storage",
+    repo: "https://github.com/WerdnaLes/javascript30-courses/tree/main/15-Local-Storage",
+    note: "https://github.com/WerdnaLes/javascript30-courses/blob/main/15-Local-Storage/README.md",
   },
   {
     id: 16,

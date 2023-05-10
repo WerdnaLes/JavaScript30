@@ -138,12 +138,12 @@ const challenges = [
   },
   {
     id: 16,
-    title: "",
-    desc: "",
-    image: "./assets/soon.jpg",
-    demo: "",
-    repo: "",
-    note: "",
+    title: "Mouse Move Shadow",
+    desc: "Change text shadow according to mouse moves",
+    image: "./16-Mouse-Move-Shadow/assets/mouse-shadow-preview.jpg",
+    demo: "./16-Mouse-Move-Shadow",
+    repo: "https://github.com/WerdnaLes/javascript30-courses/tree/main/16-Mouse-Move-Shadow",
+    note: "https://github.com/WerdnaLes/javascript30-courses/blob/main/16-Mouse-Move-Shadow/README.md",
   },
   {
     id: 17,
@@ -279,7 +279,9 @@ function generateChallenges() {
   challenges.forEach((challenge) => {
     content.innerHTML += `
             <div class="challenge">
-                <div class="challenge__title">#${challenge.id} ${challenge.title.toUpperCase()}</div>
+                <div class="challenge__title">#${
+                  challenge.id
+                } ${challenge.title.toUpperCase()}</div>
                 <div class="image-container">
                 <img class="challenge__img" src="${challenge.image}" alt="${
       challenge.title

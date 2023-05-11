@@ -74,6 +74,53 @@ svg {
   height: min(80vw, 300px);
 }
 
+.challenge .light-holder {
+  position: absolute;
+  height: 200px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.challenge .light-holder .material-symbols-outlined {
+  position: absolute;
+  top: -60px;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+
+.challenge .light-holder .light {
+  position: relative;
+  top: -46px;
+  width: 100%;
+  height: 200px;
+}
+
+.challenge .light-holder .light::before {
+  content: "";
+  position: absolute;
+  right: 0%;
+  width: 100%;
+  height: 100%;
+  clip-path: polygon(50% 0%, 15% 100%, 85% 100%);
+  background: linear-gradient(
+    180deg,
+    rgb(255, 252, 203) 0%,
+    rgba(255, 255, 255, 0) 75%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  opacity: 0;
+  transition: opacity 250ms ease-in-out;
+  z-index: 1;
+}
+
+.challenge:hover .light-holder .light::before,
+.challenge:hover .challenge__img {
+  opacity: 1;
+}
+
 .challenge__title {
   height: 3.5rem;
   display: flex;
@@ -82,11 +129,12 @@ svg {
   gap: 5px;
   font-weight: bold;
   font-size: 1.1rem;
+  z-index: 3;
 }
 
 .challenge .image-container {
   height: 100%;
-  background-color: #81c3d7;
+  background-color: #010b0f;
   width: 100%;
   overflow: hidden;
   display: flex;
@@ -100,6 +148,8 @@ svg {
   /* width: calc(296px + (667 - 296) * (100vw - 296px) / (667 - 296)); */
   width: 100%;
   height: 100%;
+  opacity: 0.4;
+  transition: opacity 0.5s ease-in-out;
 }
 
 .challenge__links {

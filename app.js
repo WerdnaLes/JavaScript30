@@ -280,6 +280,10 @@ function generateChallenges() {
   challenges.forEach((challenge) => {
     content.innerHTML += `
             <div class="challenge">
+              <div class="light-holder">
+                <span class="material-symbols-outlined">light</span>
+                <div class="light"></div>
+               </div>
                 <div class="challenge__title">#${
                   challenge.id
                 } ${challenge.title.toUpperCase()}</div>

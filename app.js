@@ -147,12 +147,13 @@ const challenges = [
   },
   {
     id: 17,
-    title: "",
-    desc: "",
-    image: "./assets/soon.jpg",
-    demo: "",
-    repo: "",
-    note: "",
+    title: "Sort Without Articles",
+    desc: "A showcase of sort() and replace() usage to sort an array while omitting articles",
+    image:
+      "./17-Sort-Without-Articles/assets/sort-without-articles.preview.jpg",
+    demo: "./17-Sort-Without-Articles",
+    repo: "https://github.com/WerdnaLes/javascript30-courses/tree/main/17-Sort-Without-Articles",
+    note: "https://github.com/WerdnaLes/javascript30-courses/blob/main/17-Sort-Without-Articles/README.md",
   },
   {
     id: 18,

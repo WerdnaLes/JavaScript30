@@ -81,6 +81,7 @@ svg {
   text-align: center;
   background: var(--challenge-bg-clr);
   height: min(80vw, 300px);
+  transition: transform 250ms ease-in-out;
 }
 
 .challenge .light-holder {
@@ -128,6 +129,10 @@ svg {
 .challenge:hover .light-holder .light::before,
 .challenge:hover .challenge__img {
   opacity: 1;
+}
+
+.challenge:hover {
+  transform: translate(0.5rem, -0.3rem) scale(1.02);
 }
 
 .challenge__title {
@@ -204,8 +209,7 @@ svg {
     #f53e6c
   );
   background-size: 25% 100%;
-  animation: running-background
-    0.75s linear infinite;
+  animation: running-background 0.75s linear infinite;
   animation-play-state: paused;
   translate: -5% 0%;
   transition: translate 0.25s ease-out, opacity 0.5s ease;

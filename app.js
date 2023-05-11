@@ -294,13 +294,13 @@ function generateChallenges() {
                 <div class="challenge__links">
                     <a class="challenge__link demo__link" href="${
                       challenge.demo
-                    }" target="_blank"><i class="fa-regular fa-eye"></i> demo</a>
+                    }" target="_blank"><span><i class="fa-regular fa-eye"></i> demo</span></a>
                     <a class="challenge__link repo__link" href="${
                       challenge.repo
-                    }" target="_blank"><i class="fa-brands fa-github"></i> repo</a>
+                    }" target="_blank"><span><i class="fa-brands fa-github"></i> repo</span></a>
                     <a class="challenge__link note__link" href="${
                       challenge.note
-                    }" target="_blank"><i class="fa-solid fa-pencil"></i> note</a>
+                    }" target="_blank"><span><i class="fa-solid fa-pencil"></i> note</span></a>
                 </div>
             </div>
         `;

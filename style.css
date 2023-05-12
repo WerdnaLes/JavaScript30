@@ -32,16 +32,16 @@ body {
 
 html {
   font-family: "Alkatra", cursive, sans-serif;
-  font-size: calc(10px + (14 - 11) * (100vw - 600px) / (1200 - 600));
+  /* font-size: calc(12px + (14 - 12) * (100vw - 600px) / (1200 - 600)); */
+  font-size: clamp(13px, 1vw, 15px); /* Served me better than calc() */
   line-height: clamp(1.4rem, 4vw, 1.8rem);
-}
-body {
+
   background: url(./assets/prob-bg-js-courses.jpg);
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
   color: #efefef;
-  overflow: auto;
+  background-color: #222222;
 }
 
 img,
@@ -52,6 +52,17 @@ svg {
   display: block;
   max-width: 100%;
   max-height: fit-content;
+}
+
+/* Search bar won't disappear */
+.wrapper {
+  position: absolute;
+  top: 0.5px;
+  left: 0;
+  right: 0;
+  bottom: 0.5px;
+  overflow-x: hidden; /* or any other value */
+  overflow-y: auto; /* or any other value */
 }
 
 .header {
@@ -88,7 +99,7 @@ svg {
 }
 
 .content-container {
-  width: min(80vw, 1300px);
+  width: min(85vw, 1300px);
   min-width: 210px;
   margin: 0 auto;
 }
@@ -110,7 +121,7 @@ svg {
   border-radius: 10px;
   text-align: center;
   background: var(--challenge-links-clr);
-  height: min(80vw, 300px);
+  height: min(80vh, 300px);
   transition: transform 250ms ease-in-out;
   padding: 2px;
 }

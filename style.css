@@ -30,6 +30,7 @@
 ::after {
   box-sizing: border-box;
 }
+
 html,
 body {
   margin: 0;
@@ -65,6 +66,10 @@ h5,
 h6,
 a {
   color: var(--main-text-clr);
+}
+
+a {
+  text-decoration: none;
 }
 
 /* Wrap all content into div, so search bar won't disappear */
@@ -106,10 +111,12 @@ a {
 
 .header {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  position: sticky;
-  top: 0px;
+  text-align: center;
+  position: relative;
+  padding: 2rem 0;
 }
 
 .header h1 {
@@ -121,10 +128,11 @@ a {
   padding: 5px;
   line-height: 1.1;
   text-align: center;
-  flex: 1;
+  width: 90%;
+  margin: 0 0 2rem;
 }
 
-.header h1::before {
+.header::before {
   content: "";
   position: absolute;
   top: 0;
@@ -138,6 +146,34 @@ a {
   border: 5px solid black;
   border-radius: 50px 20px;
   z-index: -1;
+}
+
+.header p {
+  padding: 5px;
+  font-size: 2rem;
+  width: 90%;
+  line-height: 1;
+  text-shadow: 1px 1px 1px #efefef, 1px 1px 1px red;
+  margin: 0;
+}
+
+.header a {
+  position: relative;
+  transition: all 250ms ease;
+  display: inline-block;
+}
+
+.header a::after {
+  content: " \f08e";
+  font-family: "Font Awesome 5 Free";
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.header a:hover {
+  color: #ff0000;
+  transform: translateY(-5%);
+  text-shadow: none;
 }
 
 .content-container {
@@ -393,8 +429,6 @@ a {
   padding: 1rem;
   font-weight: bold;
 
-  text-decoration: none;
-  /* color: transparent; */
   text-shadow: 1px 1px 1px #efefef, 1px 1px 1px red;
   letter-spacing: 1.2px;
 }
@@ -408,11 +442,15 @@ a {
 }
 
 .social-link:nth-of-type(2) > i {
-  color: blue;
+  color: #0a66c2;
 }
 
 .social-link:nth-of-type(3) > i {
   color: red;
+}
+
+.social-link:nth-of-type(4) > i {
+  color: #229ed9;
 }
 
 .social-link:hover {
@@ -424,5 +462,18 @@ a {
   .content {
     display: flex;
     flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .contacts-container {
+    flex-direction: row;
+  }
+  .social-links {
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    width: fit-content;
+    padding-left: 0;
   }
 }

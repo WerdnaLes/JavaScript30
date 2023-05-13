@@ -476,4 +476,12 @@ a {
     width: fit-content;
     padding-left: 0;
   }
+  .social-link {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    row-gap: 0.5rem;
+  }
 }

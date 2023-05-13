@@ -39,3 +39,23 @@ function debounce(func, wait = 20, immediate = true) {
   };
 }
 ```
+
+## UPDATED SOLUTION:
+
+### I found a way to make this simpler and perform better by using IntersectionObserver(), with help of which we can just place an observer on every needed element, so it will appear when it intersects our view and disappear when we cross past it:
+
+```javascript
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    console.log(entry);
+    if (entry.isIntersecting) {
+      entry.target.classList.add("active");
+    } else {
+      entry.target.classList.remove("active");
+    }
+  });
+});
+
+const slideInImages = document.querySelectorAll(".slide-in");
+slideInImages.forEach((image) => observer.observe(image));
+```

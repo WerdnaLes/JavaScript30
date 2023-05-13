@@ -207,8 +207,7 @@ a {
 }
 
 .challenge.visible {
-  animation: dropIn 2s cubic-bezier(0.04, 0, 0.6, 1) forwards;
-  animation-delay: calc(var(--order) * 200ms);
+  animation: dropIn 2.5s cubic-bezier(0.04, 0, 0.6, 1) forwards;
 }
 
 .challenge .light-holder {

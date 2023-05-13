@@ -277,9 +277,9 @@ const challenges = [
 
 function generateChallenges() {
   content.innerHTML = ``;
-  challenges.forEach((challenge, index) => {
+  challenges.forEach((challenge) => {
     content.innerHTML += `
-            <div class="challenge" style="--order:${index % 3}">
+            <div class="challenge">
               <div class="light-holder">
                 <span class="material-symbols-outlined">light</span>
                 <div class="light"></div>

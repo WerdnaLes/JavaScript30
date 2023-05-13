@@ -202,6 +202,13 @@ a {
   height: min(max(200px, 80vw), 350px);
   transition: transform 250ms ease-in-out;
   padding: 2px;
+
+  opacity: 0;
+}
+
+.challenge.visible {
+  animation: dropIn 2s cubic-bezier(0.04, 0, 0.6, 1) forwards;
+  animation-delay: calc(var(--order) * 200ms);
 }
 
 .challenge .light-holder {

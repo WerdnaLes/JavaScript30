@@ -84,7 +84,7 @@ const challenges = [
   },
   {
     id: 10,
-    title: "Hold Shift and Check Checkboxes",
+    title: "Multiple Checkboxes",
     desc: "Check checkboxes in between via Shift key",
     image: "./10-Hold-Shift-and-Check-Checkboxes/assets/checkbox-preview.jpg",
     demo: "./10-Hold-Shift-and-Check-Checkboxes",
@@ -157,7 +157,7 @@ const challenges = [
   },
   {
     id: 18,
-    title: "Adding up times with reduce",
+    title: "Adding with reduce",
     desc: "Get total time length from every video and convert it in h:mm:ss format",
     image: "./assets/default.png",
     demo: "./18-Adding-Up-Times-with-Reduce",
@@ -220,7 +220,7 @@ const challenges = [
   },
   {
     id: 25,
-    title: "Event Capture Propagation Bubbling and Once",
+    title: "Event Propagation",
     desc: "A demonstration of usage of propagation, bubbling and once.",
     image:
       "./25-Event-Capture_Propagation_Bubbling-and-Once/assets/propagation-preview.jpg",
@@ -277,9 +277,9 @@ const challenges = [
 
 function generateChallenges() {
   content.innerHTML = ``;
-  challenges.forEach((challenge) => {
+  challenges.forEach((challenge, index) => {
     content.innerHTML += `
-            <div class="challenge">
+            <div class="challenge" style="--order:${index % 3}">
               <div class="light-holder">
                 <span class="material-symbols-outlined">light</span>
                 <div class="light"></div>
@@ -307,27 +307,29 @@ function generateChallenges() {
   });
 }
 
-const observer = new IntersectionObserver((entries) => {
-  console.log(entries);
+generateChallenges();
+
+const linksObserver = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
-      socialLinks.forEach((element) => {
-        console.log(element);
-        element.classList.add("visible");
-      });
-      // entry.target.classList.add("visible");
-    } else {
-      socialLinks.forEach((element) => {
-        element.classList.remove("visible");
-      });
-      // entry.target.classList.remove("visible");
+      entry.target
+        .querySelectorAll(".drop-down")
+        .forEach((el) => el.classList.add("visible"));
     }
   });
 });
 
-const socialLinks = document.querySelectorAll(".drop-down");
-const contactsContainer = document.querySelector(".contacts-container");
-observer.observe(contactsContainer);
-// socialLinks.forEach((el) => observer.observe(el));
+const cardsObserver = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("visible");
+    }
+  });
+});
 
-generateChallenges();
+const contactsContainer = document.querySelector(".contacts-container");
+const challengeCards = document.querySelectorAll(".challenge");
+
+// apply observers:
+linksObserver.observe(contactsContainer); // make all links appear when intersect with links container.
+challengeCards.forEach((card) => cardsObserver.observe(card));

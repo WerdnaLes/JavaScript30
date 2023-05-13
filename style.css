@@ -299,17 +299,15 @@ a {
   height: 100%;
   opacity: 0.4;
   transition: opacity 0.5s ease-in-out;
+  border-top: 3px solid var(--background);
+  border-bottom: 1px solid black;
 }
 
 .challenge__links {
   height: 3.5rem;
-}
-
-.content-container .challenge__links {
   display: flex;
   justify-content: space-between;
   text-align: center;
-  border-top: 1px solid black;
 }
 
 .challenge__link {

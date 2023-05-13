@@ -422,7 +422,7 @@ a {
 }
 
 .social-link {
-  transition: all 0.2s ease;
+  transition: translate 0.2s ease-in-out;
   background-image: var(--header-gradient);
   -webkit-background-clip: text;
   background-clip: text;
@@ -453,9 +453,30 @@ a {
   color: #229ed9;
 }
 
-.social-link:hover {
-  transform: translateY(-20%);
+#contact .social-link:hover {
+  translate: 0 -20%;
   text-shadow: 1px 1px 1px red, 1px 1px 1px #efefef;
+}
+
+.drop-down {
+  opacity: 0;
+}
+
+.drop-down.visible {
+  animation: dropIn 2s cubic-bezier(0.04, 0, 0.6, 1) forwards;
+  animation-delay: calc(var(--order) * 100ms);
+}
+
+@keyframes dropIn {
+  20% {
+    opacity: 0;
+    transform: translateY(-40%);
+  }
+  30%,
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @media (max-width: 380px) {

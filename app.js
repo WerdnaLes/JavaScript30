@@ -307,4 +307,27 @@ function generateChallenges() {
   });
 }
 
+const observer = new IntersectionObserver((entries) => {
+  console.log(entries);
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      socialLinks.forEach((element) => {
+        console.log(element);
+        element.classList.add("visible");
+      });
+      // entry.target.classList.add("visible");
+    } else {
+      socialLinks.forEach((element) => {
+        element.classList.remove("visible");
+      });
+      // entry.target.classList.remove("visible");
+    }
+  });
+});
+
+const socialLinks = document.querySelectorAll(".drop-down");
+const contactsContainer = document.querySelector(".contacts-container");
+observer.observe(contactsContainer);
+// socialLinks.forEach((el) => observer.observe(el));
+
 generateChallenges();

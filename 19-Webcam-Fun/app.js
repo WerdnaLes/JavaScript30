@@ -4,7 +4,7 @@ const ctx = canvas.getContext("2d");
 const strip = document.querySelector(".strip");
 const snap = document.querySelector(".snap");
 const takePicture = document.querySelector(".take-photo");
-const currentMod = document.querySelectorAll(".all-mods button");
+const currentMode = document.querySelectorAll(".all-mods button");
 let interval;
 
 function getVideo() {
@@ -26,7 +26,6 @@ function paintToCanvas(moddedPixels) {
   canvas.width = width;
   canvas.height = height;
 
-  console.log(moddedPixels);
   interval = setInterval(() => {
     ctx.drawImage(video, 0, 0);
     // Take the pixels out:
@@ -84,8 +83,6 @@ function greenScreen(pixels) {
     levels[input.name] = input.value;
   });
 
-  // console.log(levels);
-
   for (let i = 0; i < pixels.data.length; i += 4) {
     let red = pixels.data[i + 0];
     let green = pixels.data[i + 1];
@@ -122,7 +119,7 @@ function changeMode() {
 video.addEventListener("canplay", paintToCanvas);
 takePicture.addEventListener("click", takePhoto);
 
-currentMod.forEach((mod) => mod.addEventListener("click", changeMode));
+currentMode.forEach((mode) => mode.addEventListener("click", changeMode));
 
 window.onload = () => {
   getVideo();

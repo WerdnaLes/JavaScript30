@@ -166,12 +166,12 @@ const challenges = [
   },
   {
     id: 19,
-    title: "",
-    desc: "",
+    title: "Webcam Fun",
+    desc: "Project your webcam image on a canvas and mess with RGBs",
     image: "./19-Webcam-Fun/assets/webcam-fun-preview.jpg",
     demo: "./19-Webcam-Fun",
-    repo: "",
-    note: "",
+    repo: "https://github.com/WerdnaLes/javascript30-courses/tree/main/19-Webcam-Fun",
+    note: "https://github.com/WerdnaLes/javascript30-courses/blob/main/19-Webcam-Fun/README.md",
   },
   {
     id: 20,
